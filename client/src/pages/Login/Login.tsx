@@ -5,11 +5,15 @@ import "./Login.style.scss";
 
 function Login() {
   const [message, setMessage] = useState(null);
+
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+
   const { login } = useAccountContext();
 
   const attemptLogin = async () => {
     try {
-      const message = await login("admin@email.com", "password");
+      const message = await login(user, pass);
       setMessage(message);
     } catch (error) {
       console.log(error);
@@ -34,8 +38,8 @@ function Login() {
           </div>
           {message && <p>{message}</p>}
           <div className="Login__panel__content__input">
-            <input type="text" placeholder="fullname@cmail.carleton.ca"></input>
-            <input type="password" placeholder="Password"></input>
+            <input type="text" placeholder="MyCarletonOne username" onChange={e => setUser(e.target.value)} ></input>
+            <input type="password" placeholder="Password" onChange={e => setPass(e.target.value)} ></input>
           </div>
           <div className="Login__panel__content__checkbox">
             <input type="checkbox"></input>
