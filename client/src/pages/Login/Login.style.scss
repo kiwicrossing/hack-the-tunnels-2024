@@ -3,9 +3,9 @@
   height: 100vh;
   background-color: inherit;
   background-repeat: no-repeat;
-  background-size: cover;
   -webkit-background-size: cover;
-  background-image: url("/carleton_background.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/cute-kitten-is-playing-with-soap-bubbles_553012-13592.jpg");
+  background-size: 800px;
   font-size: 0.9em;
 
   &__panel {
@@ -24,14 +24,14 @@
 
     &__button {
       border: none;
-      background-color: rgb(38, 114, 236);
-      color: rgb(255, 255, 255);
+      background-color: rgb(255, 205, 236);
+      color: black;
       padding: 0.25rem 1.25rem 0.375rem 1.25rem;
       cursor: pointer;
       font-size: 0.9rem;
 
       &:hover {
-        background: rgb(212, 227, 251);
+        background: rgb(252, 230, 243);
       }
     }
 
