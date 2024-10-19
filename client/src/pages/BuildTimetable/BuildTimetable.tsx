@@ -18,6 +18,8 @@ function BuildTimetable() {
   const [selectedEvents, setSelectedEvents] = useState<ScheduledEvent[]>([]);
   const navigate = useNavigate();
 
+  const [name, setName] = useState("");
+
   const fetchScheduledEvents = async () => {
     const result = await ServiceAPI.fetchScheduledEvents();
     setScheduledEvents(result);
@@ -25,11 +27,11 @@ function BuildTimetable() {
 
   const createTimetable = async () => {
     const result = await ServiceAPI.createTimetable(
-      new Date().toISOString(),
+      name,
       selectedEvents.map((event) => event.id.toString()),
       jwt,
     );
-
+        
     navigate(`/timetables/${result.data.id}`);
   };
 
@@ -64,6 +66,9 @@ function BuildTimetable() {
             />
           </Section>
         )}
+        <Section title="Save Worksheet As">
+          <input type="text" placeholder="Worksheet name" onChange={e => setName(e.target.value)} ></input>
+        </Section>
         <Section title="Draft Timetable">
           <TimetableSection
             selectedEvents={selectedEvents.map((event: ScheduledEvent) =>
