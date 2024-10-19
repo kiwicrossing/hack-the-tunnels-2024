@@ -2,10 +2,13 @@ import { Central as Layout } from "@/layouts";
 import { CabinetSection } from "./CabinetSection";
 import "./Menu.style.scss";
 import { Link } from "react-router-dom";
+import bubblecat from '../../../../assets/bubblecat.jpg'
+
 
 function Menu() {
   return (
     <Layout title={"Main Menu"}>
+      <img src={bubblecat} width="100px"></img>
       <br />
       <CabinetSection
         title="Personal Information"

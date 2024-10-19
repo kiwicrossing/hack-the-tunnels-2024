@@ -6,7 +6,7 @@ interface TabProps {
   color: boolean;
 }
 
-function Tab({ label, highlighted, color }: TabProps) {
+function Tab({ label, highlighted }: TabProps) {
   return (
     <div className="Tab">
       <div className="Tab__left" color="hotpink"></div>
