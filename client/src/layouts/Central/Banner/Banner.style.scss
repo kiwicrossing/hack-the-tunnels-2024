@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   height: 3rem;
-  background-color: #E4748E;
+  background-color: rgb(239, 104, 147);
   gap: 2rem;
 
   img {
@@ -22,7 +22,7 @@
 
   &__title {
     font-family: "Lucida Handwriting", cursive;
-    color: #FDD2DC;
+    color: #f8dde4;
     font-size: 1.6rem;
   }
 }
