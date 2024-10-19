@@ -8,7 +8,8 @@ import bubblecat from '../../../../assets/bubblecat.jpg'
 function Menu() {
   return (
     <Layout title={"Main Menu"}>
-      <img src={bubblecat} width="100px"></img>
+      <img src={bubblecat} width="100px" id="left"></img>
+      <img src={bubblecat} width="100px" id="right"></img>
       <br />
       <CabinetSection
         title="Personal Information"
